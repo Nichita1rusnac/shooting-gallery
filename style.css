@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 60%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+select {
+  padding: 0.5rem 0;
+  width: 50%;
+  max-width: 600px;
+}
+
+input[type="number"] {
+  padding: 0.5rem 0;
+}
+
+.quantity-input label {
+  display: inline-block;
+  width: 60px;
+}
+
+.price-per-item {
+  font-weight: bold;
+}
+
+.add-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.add-button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #3e8e41;
+}
+
+.added-items {
+  border-top: 1px solid #ddd;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.item-details {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.delete-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-button {
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c62828;
+}
+
+table {
+  width: 100%;
+  margin: 20px auto;
+  table-layout: auto;
+}
+
+.fixed {
+  table-layout: fixed;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: solid 1px;
+  text-align: center;
+}
+
+@media print {
+  .container {
+    border: none;
+    background: none;
+  }
+
+  .added-items {
+    border-top: none;
+  }
+  .services,
+  .delete-button {
+    display: none;
+  }
+
+  @page {
+    margin: 0;
+  }
+}
